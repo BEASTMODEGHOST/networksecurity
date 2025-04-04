@@ -23,6 +23,8 @@ from sklearn.ensemble import (
     GradientBoostingClassifier,
     RandomForestClassifier,
 )
+import dagshub
+dagshub.init(repo_owner='sanyamjhuria.iitkgp', repo_name='networksecurity', mlflow=True)
 
 class ModelTrainer:
     def __init__(self,model_trainer_config:ModelTrainerConfig,data_transformation_artifact:DataTransformationArtifact):
@@ -67,14 +69,14 @@ class ModelTrainer:
             "Gradient Boosting":{
                 # 'loss':['log_loss', 'exponential'],
                 'learning_rate':[.1,.01,.05,.001],
-                'subsample':[0.6,0.7,0.75,0.85,0.9],
+                'subsample':[0.6,0.7,0.75,0.9],
                 # 'criterion':['squared_error', 'friedman_mse'],
                 # 'max_features':['auto','sqrt','log2'],
                 'n_estimators': [8,16,32,64,128,256]
             },
             "Logistic Regression":{},
             "AdaBoost":{
-                'learning_rate':[.1,.01,.001],
+                'learning_rate':[.1,.001],
                 'n_estimators': [8,16,32,64,128,256]
             }
             
