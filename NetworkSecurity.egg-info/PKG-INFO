@@ -1,8 +1,8 @@
 Metadata-Version: 2.2
 Name: NetworkSecurity
 Version: 0.0.1
-Author: Krish Naik
-Author-email: krishnaik06@gmail.com
+Author: Sanyam Jhuria with Krish Naik
+Author-email: sanyamjhuria.iitkgp@gmail.com
 Requires-Dist: python-dotenv
 Requires-Dist: pandas
 Requires-Dist: numpy
